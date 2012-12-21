@@ -6,11 +6,11 @@ use warnings;
 
 =head1 NAME
 
-RT::Extension::TicketPDF - send email to groups
+RT::Extension::TicketPDF - make pdfs from tickets.
 
 =cut
 
-our $VERSION = '0.1.1';
+our $VERSION = '0.1.2';
 
 =head1 SYNOPSIS
 
@@ -20,7 +20,7 @@ Use wkhtmltopdf to display a Ticket as a pdf.
 
 =head1 INSTALL
 
-    Requires: /usr/bin/wkhtmltopdf, IPC::Cmd
+    Requires: $RT::BinPath/wkhtmltopdf, IPC::Cmd
 
     perl Makefile.PL
     make
@@ -36,7 +36,12 @@ Please report any bugs at either:
 
     L<http://search.cpan.org/dist/RT-Extension-TicketPDF/>
     L<https://github.com/coffeemonster/rt-extension-ticketpdf>
-    
+
+wkhtmltopdf known-issues:
+
+    images render blank - This is a limitation with v10. Use JPG's for all images.
+    QPixmap > Seg-fault - A bug with v11rc1 use v10rc2
+
 
 =head1 LICENSE AND COPYRIGHT
 
@@ -50,6 +55,12 @@ See http://dev.perl.org/licenses/ for more information.
 
 
 =head1 CHANGES
+
+0.1.2  2012-12-20
+    - Use binary in local $RT::LocalPath/bin/wkhtmltopdf instead of /usr/bin/..
+    - Including wkhtmltopdf v10.0rc2 to avoid QPixmap Seg-fault bug in v11.0rc1
+    - GeneratePDF menu item added.
+    - Simple Template added.
 
 0.1.1  2012-12-19
     - Inital Release

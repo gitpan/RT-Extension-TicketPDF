@@ -1,5 +1,8 @@
+bin/wkhtmltopdf
+html/Callbacks/TicketPDF/Elements/Tabs/Privileged
 html/Ticket/PDF/Display.html
 html/Ticket/PDF/Display.pdf
+html/Ticket/PDF/Simple.html
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm

@@ -1,5 +1,5 @@
 ---
-abstract: 'send email to groups'
+abstract: 'make pdfs from tickets.'
 author:
   - 'Alister West, C<< <alister at alisterwest.com> >>'
 build_requires:
@@ -21,4 +21,4 @@ requires:
   perl: 5.6.0
 resources:
   license: http://opensource.org/licenses/gpl-license.php
-version: 0.1.1
+version: 0.1.2
